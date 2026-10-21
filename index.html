@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Pablo Liguori Porras</title>
+</head>
+<body>
+    
+
+    <section id="home">
+        <nav>
+            <div class="nav-c">
+                <h1>PLP</h1>
+                <ul>
+                    <li><a href="proj.html">Projects</a></li>
+                    <li><a href="cont.html">Contacts</a></li>
+                    <li><button id="themeToggle">Light</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="img-container">
+            <img src="img/prof-pic.jpeg" alt="">
+        </div>
+        <div class="gen-container">
+            <h1 class="gen-title">Pablo Liguori Porras</h1>
+            <h3 class="gen-subtitle">Computer Science student</h3>
+            <p class="gen-discover">Discover more <a href="#about">here</a></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="wrapper">
+            <div class="s-container">
+                <div class="s-cont-title">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h1>Education</h1>
+                </div>
+                
+                <ul>
+                    <li><span>Applied Sciences</span> | Liceo Scientifico Nomentano</li>
+                    <li><span>Applied Computer Sciences and Artificial Intelligence</span> | Sapienza </li>
+                    <li><span>C1 Cambridge Certification</span> | Cambridge Assessment English</li>
+                </ul>
+            </div>
+            <span class="separe"></span>
+            <div class="a-container">
+                <h1>HI,</h1>
+                <p>I'm a <span>Computer Science</span>  student currently enrolled in ACSAI Sapienza course. <br> I build responsive, well-structured web pages using <span>HTML & CSS</span>, <br> with a focus on clean code and design. <br> I'm also finalizing my <span>Python</span> knowledge, by following the ACSAI course.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <script>
+        const button = document.getElementById('themeToggle');
+        const root = document.documentElement;
+
+        button.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'light';
+
+        if (isDark) {
+            root.removeAttribute('data-theme');
+            button.textContent = 'Light'; 
+        } else {
+            root.setAttribute('data-theme', 'light');
+            button.textContent = 'Dark'; 
+        }
+        });
+    </script>
+</body>
+</html>

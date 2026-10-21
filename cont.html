@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cont.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Pablo Liguori Porras</title>
+</head>
+<body>
+    
+
+    <section id="home">
+        <nav>
+            <div class="nav-c">
+                <h1>PLP</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="proj.html">Projects</a></li>
+                    <li><button id="themeToggle">Light</button></li>
+                </ul>
+            </div>
+        </nav>
+        
+    </section>
+
+    <section>
+
+    </section>
+
+    <script>
+        const button = document.getElementById('themeToggle');
+        const root = document.documentElement;
+
+        button.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'light';
+
+        if (isDark) {
+            root.removeAttribute('data-theme');
+            button.textContent = 'Light'; 
+        } else {
+            root.setAttribute('data-theme', 'light');
+            button.textContent = 'Dark'; 
+        }
+        });
+    </script>
+</body>
+</html>
